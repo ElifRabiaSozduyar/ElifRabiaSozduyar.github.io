@@ -1,0 +1,84 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7f9;
+  color: #333;
+  margin: 0;
+  padding: 0 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background: #007acc;
+  color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #007acc;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+#chatbox {
+  border: 1px solid #ccc;
+  padding: 15px;
+  height: 250px;
+  overflow-y: auto;
+  background: #fafafa;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+input {
+  width: 70%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  background: #007acc;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #005f99;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  color: #666;
+}
