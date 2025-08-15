@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Benim Kişisel Sitem</title>
+  <style>
+    body { font-family: Arial; max-width: 700px; margin: auto; padding: 20px; }
+    #chatbox { border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: auto; margin-bottom: 10px; }
+    input { width: 80%; padding: 8px; }
+    button { padding: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Merhaba, ben [Adın]</h1>
+  <p>Marketing Analytics yüksek lisans öğrencisiyim. Sorularınızı sorun!</p>
+
+  <div id="chatbox"></div>
+  <input id="userInput" type="text" placeholder="Bana bir şey sor...">
+  <button onclick="sendMessage()">Gönder</button>
+
+  <script>
+    const chatbox = document.getElementById('chatbox');
+
+    function sendMessage() {
+      const input = document.getElementById('userInput');
+      const message = input.value;
+      if (!message) return;
+      chatbox.innerHTML += `<p><b>Sen:</b> ${message}</p>`;
+      input.value = '';
+
+      // Basit cevaplar (senin bilgilerinle doldur)
+      let cevap = '';
+      if (message.toLowerCase().includes('adın')) {
+        cevap = 'Benim adım [Adın].';
+      } else if (message.toLowerCase().includes('okul')) {
+        cevap = 'FHWN’de Marketing Analytics yüksek lisansı yapıyorum.';
+      } else if (message.toLowerCase().includes('hob')) {
+        cevap = 'Kitap okumayı ve satış stratejileri öğrenmeyi seviyorum.';
+      } else {
+        cevap = 'Buna şimdilik cevabım yok 🙂';
+      }
+      chatbox.innerHTML += `<p><b>Bot:</b> ${cevap}</p>`;
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+  </script>
+</body>
+</html>
