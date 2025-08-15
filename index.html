@@ -3,215 +3,174 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elif Rabia Sözdüyar - Portfolio</title>
+<title>Elif Rabia Sözdüyar Portfolio</title>
 <style>
-  /* General */
+  /* Temel renk ve font ayarları */
   body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #fdfaff;
+    padding: 0;
+    background: #ffffff;
     color: #333;
-    scroll-behavior: smooth;
   }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
   header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #e6daff; /* Light lilac */
-    padding: 20px 0;
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: #c8a2ff; /* Açık lila */
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    font-style: italic;
   }
-
   nav {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    font-style: italic;
-    font-weight: 600;
-    font-size: 1.1em;
+    background: #f7f2ff;
+    padding: 10px 0;
+    gap: 30px;
   }
-
+  nav a {
+    text-decoration: none;
+    color: #4a1f7c; /* Daha koyu lila */
+    font-weight: bold;
+  }
   section {
-    padding: 100px 20px 50px 20px;
-    max-width: 900px;
+    padding: 40px;
+  }
+  h2 {
+    color: #6a0dad;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  img.profile {
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid #c8a2ff;
+    margin-right: 20px;
+  }
+  .about-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .projects-container, .certs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .project, .cert {
+    flex: 1 1 250px;
+    background: #f7f2ff;
+    border: 1px solid #c8a2ff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+  }
+  .project img, .cert img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  #chatbot {
+    border: 1px solid #c8a2ff;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f7f2ff;
+    max-width: 400px;
     margin: 0 auto;
   }
-
-  h2 {
-    color: #c8a2ff; /* Soft lilac */
-    font-style: italic;
-    font-size: 2em;
-    margin-bottom: 15px;
-  }
-
-  p, ul {
-    font-size: 1.05em;
-    line-height: 1.6em;
-  }
-
-  ul {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-
-  /* Chatbot */
-  #chat-container {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 300px;
-    background: #f7f2ff; /* Very light lilac */
-    border: 2px solid #c8a2ff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    display: flex;
-    flex-direction: column;
-    z-index: 1001;
-  }
-
-  #chatbox {
-    height: 300px;
-    overflow-y: auto;
-    padding: 10px;
-    border-bottom: 2px solid #c8a2ff;
-  }
-
-  #chatbox p {
-    margin: 5px 0;
-  }
-
-  #chat-input {
-    display: flex;
-    padding: 10px;
-    gap: 5px;
-  }
-
-  #chat-input input {
-    flex: 1;
+  #chatbot input[type="text"] {
+    width: 80%;
     padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #c8a2ff;
   }
-
-  #chat-input button {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
+  #chatbot button {
+    padding: 8px;
     background: #c8a2ff;
+    border: none;
     color: white;
+    font-weight: bold;
     cursor: pointer;
   }
-
-  #chat-input button:hover {
-    background: #a77fff;
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 30px 0;
-    font-size: 0.9em;
-    color: #666;
-  }
-
 </style>
 </head>
 <body>
 
 <header>
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#blog">Blog</a>
-  </nav>
+  Elif Rabia Sözdüyar
 </header>
+
+<nav>
+  <a href="#about">About Me</a>
+  <a href="#projects">Projects</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#blog">Blog</a>
+</nav>
 
 <section id="about">
   <h2>About Me</h2>
-  <p>Hello! I'm Elif Rabia Sözdüyar, born in Ankara, Turkey (02.07.2001). I hold a Bachelor's degree in International Business and Economics and have hands-on experience in client communication and digital marketing. Skilled in Microsoft Office, R, SPSS, and Python. Starting my Master's in Marketing Analytics at FHWN in September 2025.</p>
+  <div class="about-container">
+    <img src="profile.jpg" alt="Elif Rabia Sözdüyar" class="profile">
+    <p>
+      Born in Ankara/Turkey 02.07.2001. Recent graduate in International Business and Economics with hands-on experience in client communication and digital marketing. Skilled in Microsoft Office and familiar with data tools such as R, SPSS, and Python. Proven ability to work in multicultural teams and deliver results in fast-paced environments. Starting a Master’s in Business Consultancy International with a specialization in Marketing Analytics at FHWN in September 2025.
+    </p>
+  </div>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
-  <ul>
-    <li>Project management and website design for Preunec GmbH</li>
-    <li>Social media campaigns and content planning</li>
-    <li>Student events and cultural organization coordination</li>
-  </ul>
+  <div class="projects-container">
+    <div class="project">
+      <img src="project1.jpg" alt="Website Project">
+      <h3>Website Project</h3>
+      <p>Managed client website and social media campaigns.</p>
+    </div>
+    <div class="project">
+      <img src="project2.jpg" alt="Event Organization">
+      <h3>Event Organization</h3>
+      <p>Coordinated events for 20+ people.</p>
+    </div>
+  </div>
 </section>
 
-<section id="certificates">
-  <h2>Certificates</h2>
-  <ul>
-    <li>Microsoft Office Expertise</li>
-    <li>R and SPSS Data Analysis Courses</li>
-    <li>Digital Marketing and Social Media Certifications</li>
-  </ul>
+<section id="certifications">
+  <h2>Certifications</h2>
+  <div class="certs-container">
+    <div class="cert">
+      <img src="cert_icon.png" alt="Microsoft Office">
+      <p>Microsoft Office Expertise</p>
+    </div>
+    <div class="cert">
+      <img src="cert_icon.png" alt="Data Analysis">
+      <p>R and SPSS Data Analysis</p>
+    </div>
+  </div>
 </section>
 
 <section id="blog">
   <h2>Blog</h2>
-  <p>No posts yet. I will share insights about marketing, data analytics, and my professional experiences here soon.</p>
+  <p>Coming soon...</p>
 </section>
 
-<div id="chat-container">
-  <div id="chatbox"></div>
-  <div id="chat-input">
-    <input id="userInput" type="text" placeholder="Ask me about me...">
-    <button onclick="sendMessage()">Send</button>
-  </div>
-</div>
-
-<footer>
-  &copy; 2025 Elif Rabia Sözdüyar
-</footer>
+<section id="chatbot">
+  <h2>Chatbot</h2>
+  <div id="chat-area" style="height:200px; overflow-y:auto; border:1px solid #c8a2ff; margin-bottom:10px; padding:5px; background:white;"></div>
+  <input type="text" id="user-input" placeholder="Ask me anything!">
+  <button onclick="talk()">Send</button>
+</section>
 
 <script>
-  const chatbox = document.getElementById('chatbox');
+  function talk() {
+    const input = document.getElementById('user-input').value.toLowerCase();
+    const chatArea = document.getElementById('chat-area');
+    let reply = "Sorry, I don't understand that yet.";
 
-  const info = {
-    name: "Elif Rabia Sözdüyar",
-    birth: "I was born in Ankara, Turkey on 02.07.2001.",
-    education: "Master’s in Marketing Analytics at FHWN (Starting Sep 2025). Bachelor from University of Klagenfurt & Social Sciences University of Ankara.",
-    skills: "Microsoft Office, R, SPSS, Python. Languages: Turkish (native), English (professional), German (intermediate).",
-    experience: "Project Management Intern, Assistant at language school, Event Organizer & Social Media Assistant.",
-    volunteer: "Team Member at ESN Klagenfurt and Vice President of International Students Community.",
-    default: "I am still learning to answer everything! Ask me about my name, studies, skills, experience, or volunteer work."
-  };
+    if(input.includes("name")) reply = "My name is Elif Rabia Sözdüyar.";
+    if(input.includes("education")) reply = "I studied International Business and Economics in Austria.";
+    if(input.includes("skills")) reply = "I am skilled in Microsoft Office, R, SPSS, and Python.";
+    if(input.includes("projects")) reply = "I have managed websites and organized events for 20+ people.";
 
-  function sendMessage() {
-    const input = document.getElementById('userInput');
-    const msg = input.value.trim().toLowerCase();
-    if(msg === "") return;
-    appendMessage("You: " + input.value);
-
-    let answer = info.default;
-    if(msg.includes("name")) answer = info.name;
-    else if(msg.includes("born") || msg.includes("birth") || msg.includes("age")) answer = info.birth;
-    else if(msg.includes("study") || msg.includes("education") || msg.includes("school")) answer = info.education;
-    else if(msg.includes("skills") || msg.includes("abilities")) answer = info.skills;
-    else if(msg.includes("experience") || msg.includes("work") || msg.includes("job")) answer = info.experience;
-    else if(msg.includes("volunteer")) answer = info.volunteer;
-
-    appendMessage("Bot: " + answer);
-    input.value = "";
-    chatbox.scrollTop = chatbox.scrollHeight;
+    chatArea.innerHTML += "<p><strong>You:</strong> " + input + "</p>";
+    chatArea.innerHTML += "<p><strong>Bot:</strong> " + reply + "</p>";
+    chatArea.scrollTop = chatArea.scrollHeight;
+    document.getElementById('user-input').value = "";
   }
-
-  function appendMessage(msg) {
-    const p = document.createElement('p');
-    p.textContent = msg;
-    chatbox.appendChild(p);
-  }
-
 </script>
 
 </body>
