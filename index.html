@@ -1,177 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elif Rabia Sözdüyar Portfolio</title>
-<style>
-  /* Temel renk ve font ayarları */
-  body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #ffffff;
-    color: #333;
-  }
-  header {
-    background: #c8a2ff; /* Açık lila */
-    color: white;
-    padding: 20px 40px;
-    text-align: center;
-    font-style: italic;
-  }
-  nav {
-    display: flex;
-    justify-content: center;
-    background: #f7f2ff;
-    padding: 10px 0;
-    gap: 30px;
-  }
-  nav a {
-    text-decoration: none;
-    color: #4a1f7c; /* Daha koyu lila */
-    font-weight: bold;
-  }
-  section {
-    padding: 40px;
-  }
-  h2 {
-    color: #6a0dad;
-    margin-bottom: 20px;
-    font-style: italic;
-  }
-  img.profile {
-    width: 150px;
-    border-radius: 50%;
-    border: 3px solid #c8a2ff;
-    margin-right: 20px;
-  }
-  .about-container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .projects-container, .certs-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .project, .cert {
-    flex: 1 1 250px;
-    background: #f7f2ff;
-    border: 1px solid #c8a2ff;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-  }
-  .project img, .cert img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  #chatbot {
-    border: 1px solid #c8a2ff;
-    padding: 15px;
-    border-radius: 10px;
-    background: #f7f2ff;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  #chatbot input[type="text"] {
-    width: 80%;
-    padding: 8px;
-  }
-  #chatbot button {
-    padding: 8px;
-    background: #c8a2ff;
-    border: none;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elif Rabia Sözdüyar</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      margin: 0;
+      background: #fdfdff;
+      color: #333;
+    }
+    header {
+      background: #d8c6f0;
+      color: #2d1460;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: white;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 1rem;
+    }
+    nav a {
+      color: #2d1460;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 3rem 10%;
+    }
+    h2 {
+      color: #2d1460;
+      margin-bottom: 1rem;
+    }
+    .about {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .about img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #b197e6;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 1rem;
+      text-align: center;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background: #d8c6f0;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    /* Chatbot box */
+    #chatbot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      background: white;
+      border: 2px solid #b197e6;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    #chatbot-messages {
+      flex: 1;
+      padding: 1rem;
+      overflow-y: auto;
+      font-size: 0.9rem;
+    }
+    #chatbot-input {
+      border: none;
+      border-top: 1px solid #eee;
+      padding: 0.8rem;
+      outline: none;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Elif Rabia Sözdüyar</h1>
+  </header>
 
-<header>
-  Elif Rabia Sözdüyar
-</header>
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#blog">Blog</a>
+  </nav>
 
-<nav>
-  <a href="#about">About Me</a>
-  <a href="#projects">Projects</a>
-  <a href="#certifications">Certifications</a>
-  <a href="#blog">Blog</a>
-</nav>
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about">
+      <img src="profile.jpg" alt="Profile Picture">
+      <p>
+        Born in Ankara, Türkiye (02.07.2001). Recent graduate in International Business and Economics with 
+        hands-on experience in client communication and digital marketing. Skilled in Microsoft Office and familiar 
+        with R, SPSS, and Python. Starting a Master’s in Business Consultancy International 
+        (Marketing Analytics specialization) at FHWN in September 2025.
+      </p>
+    </div>
+  </section>
 
-<section id="about">
-  <h2>About Me</h2>
-  <div class="about-container">
-    <img src="profile.jpg" alt="Elif Rabia Sözdüyar" class="profile">
-    <p>
-      Born in Ankara/Turkey 02.07.2001. Recent graduate in International Business and Economics with hands-on experience in client communication and digital marketing. Skilled in Microsoft Office and familiar with data tools such as R, SPSS, and Python. Proven ability to work in multicultural teams and deliver results in fast-paced environments. Starting a Master’s in Business Consultancy International with a specialization in Marketing Analytics at FHWN in September 2025.
-    </p>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="project1.jpg" alt="Project 1">
+        <h3>Website Project</h3>
+        <p>Managed client website and social media campaigns.</p>
+      </div>
+      <div class="card">
+        <img src="project2.jpg" alt="Project 2">
+        <h3>Event Organization</h3>
+        <p>Coordinated events for 20+ people.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="cert1.png" alt="Certification 1">
+        <h3>Microsoft Office Expertise</h3>
+      </div>
+      <div class="card">
+        <img src="cert2.png" alt="Certification 2">
+        <h3>R & SPSS Data Analysis</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+    <p>Coming soon...</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Elif Rabia Sözdüyar</p>
+  </footer>
+
+  <!-- Chatbot -->
+  <div id="chatbot">
+    <div id="chatbot-messages"></div>
+    <input type="text" id="chatbot-input" placeholder="Ask me something...">
   </div>
-</section>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="projects-container">
-    <div class="project">
-      <img src="project1.jpg" alt="Website Project">
-      <h3>Website Project</h3>
-      <p>Managed client website and social media campaigns.</p>
-    </div>
-    <div class="project">
-      <img src="project2.jpg" alt="Event Organization">
-      <h3>Event Organization</h3>
-      <p>Coordinated events for 20+ people.</p>
-    </div>
-  </div>
-</section>
+  <script>
+    const messages = document.getElementById('chatbot-messages');
+    const input = document.getElementById('chatbot-input');
 
-<section id="certifications">
-  <h2>Certifications</h2>
-  <div class="certs-container">
-    <div class="cert">
-      <img src="cert_icon.png" alt="Microsoft Office">
-      <p>Microsoft Office Expertise</p>
-    </div>
-    <div class="cert">
-      <img src="cert_icon.png" alt="Data Analysis">
-      <p>R and SPSS Data Analysis</p>
-    </div>
-  </div>
-</section>
+    function addMessage(text, from="bot") {
+      const div = document.createElement("div");
+      div.textContent = text;
+      div.style.margin = "0.3rem 0";
+      div.style.color = from === "bot" ? "#2d1460" : "#555";
+      messages.appendChild(div);
+      messages.scrollTop = messages.scrollHeight;
+    }
 
-<section id="blog">
-  <h2>Blog</h2>
-  <p>Coming soon...</p>
-</section>
+    input.addEventListener("keypress", function(e) {
+      if (e.key === "Enter" && input.value.trim() !== "") {
+        const msg = input.value.trim().toLowerCase();
+        addMessage("You: " + input.value, "user");
+        let answer = "I don't have an answer for that yet 🙂";
+        if (msg.includes("name")) answer = "My name is Elif Rabia Sözdüyar.";
+        else if (msg.includes("study")) answer = "I'm starting my Master’s in Marketing Analytics at FHWN in 2025.";
+        else if (msg.includes("skills")) answer = "I’m skilled in Microsoft Office, R, SPSS, and Python.";
+        else if (msg.includes("experience")) answer = "I worked as a Project Management Intern, Assistant, and Event Organizer.";
+        else if (msg.includes("languages")) answer = "I speak Turkish (native), English (professional), and German (intermediate).";
+        addMessage("Bot: " + answer, "bot");
+        input.value = "";
+      }
+    });
 
-<section id="chatbot">
-  <h2>Chatbot</h2>
-  <div id="chat-area" style="height:200px; overflow-y:auto; border:1px solid #c8a2ff; margin-bottom:10px; padding:5px; background:white;"></div>
-  <input type="text" id="user-input" placeholder="Ask me anything!">
-  <button onclick="talk()">Send</button>
-</section>
-
-<script>
-  function talk() {
-    const input = document.getElementById('user-input').value.toLowerCase();
-    const chatArea = document.getElementById('chat-area');
-    let reply = "Sorry, I don't understand that yet.";
-
-    if(input.includes("name")) reply = "My name is Elif Rabia Sözdüyar.";
-    if(input.includes("education")) reply = "I studied International Business and Economics in Austria.";
-    if(input.includes("skills")) reply = "I am skilled in Microsoft Office, R, SPSS, and Python.";
-    if(input.includes("projects")) reply = "I have managed websites and organized events for 20+ people.";
-
-    chatArea.innerHTML += "<p><strong>You:</strong> " + input + "</p>";
-    chatArea.innerHTML += "<p><strong>Bot:</strong> " + reply + "</p>";
-    chatArea.scrollTop = chatArea.scrollHeight;
-    document.getElementById('user-input').value = "";
-  }
-</script>
-
+    addMessage("Bot: Hi! Ask me about my studies, skills, or experience.");
+  </script>
 </body>
 </html>
